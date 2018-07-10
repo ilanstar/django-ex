@@ -11,7 +11,7 @@ urlpatterns = [
 
     #url(r'^$', index),
     url(r'', include('fubar.urls')),
-    #url(r'^fubar/$', include('fubar.urls')),
+    url(r'^fubar/', include('fubar.urls')),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
 ]
