@@ -9,7 +9,9 @@ urlpatterns = [
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', index),
+    #url(r'^$', index),
+    url(r'', include('fubar.urls')),
+    #url(r'^fubar/$', include('fubar.urls')),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
 ]
