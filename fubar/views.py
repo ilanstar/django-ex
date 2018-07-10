@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+import xmltodict
 from django.shortcuts import render
 from django.http import HttpResponse
-
+import redis
 from django.views.decorators.csrf import csrf_exempt
+
+g_redis=redis.StrictRedis(host='localhost', port=6379, db=0)
 
 @csrf_exempt
 def index(request):
